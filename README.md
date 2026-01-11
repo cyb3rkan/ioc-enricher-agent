@@ -1,78 +1,72 @@
-<div align="center"> 
-🔍 IOC Enricher Agent
- <img src="assets/banner.png" alt="IOC Enricher Banner" width="800"/> 
+# 🔍 IOC Enricher Agent
 
-AI-Powered Indicator of Compromise (IOC) Enrichment Tool
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge)
+![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge&logo=openai&logoColor=white)
+
+**AI-Powered Indicator of Compromise (IOC) Enrichment Tool**
+
 Siber güvenlik analistlerinin manuel olarak yaptığı IOC zenginleştirme işlemlerini saniyeler içinde otomatize eden bir AI agent.
-Features(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-features) • Installation(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-installation) • Usage(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-usage) • API Keys(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-api-keys) • Contributing(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-contributing)
 
- </div> 
-🎯 Problem & Çözüm
-❌ Geleneksel Yöntem
-Bir SOC analisti şüpheli bir IP adresi gördüğünde, manuel olarak 5-6 farklı threat intelligence platformunu kontrol eder. Bu işlem her bir IOC için 10-15 dakika sürer.
-✅ Bu Araç ile
+---
+
+## 🎯 Problem ve Çözüm
+
+### ❌ Geleneksel Yöntem
+Bir SOC analisti şüpheli bir IP adresi gördüğünde, manuel olarak 5-6 farklı threat intelligence platformunu kontrol eder. Bu işlem her bir IOC için **10-15 dakika** sürer.
+
+### ✅ Bu Araç ile
 Tek bir komutla tüm platformlardan veri toplanır, analiz edilir ve saniyeler içinde kapsamlı bir rapor oluşturulur.
-⏱️ Geleneksel: 10-15 dakika/IOC
-⚡ IOC Enricher: 5-10 saniye/IOC
-📈 Verimlilik Artışı: %98+
 
-✨ Features
- <table> <tr> <td width="50%"> 
-🔎 Multi-Source Intelligence
-* VirusTotal entegrasyonu
-* AbuseIPDB reputation kontrolü
-* Shodan port/servis bilgisi
-* AlienVault OTX threat feeds
-* GreyNoise classification
- </td> <td width="50%"> 
-🤖 AI-Powered Analysis
-* LLM ile tehdit özeti
-* Risk skorlama algoritması
-* Öneri ve aksiyon önerileri
-* Bağlamsal analiz
- </td> </tr> <tr> <td width="50%"> 
-📊 Reporting
-* JSON/Markdown/HTML çıktı
-* Görsel dashboard
-* Export seçenekleri
-* API endpoint desteği
- </td> <td width="50%"> 
-⚡ Performance
-* Asenkron API çağrıları
-* Batch processing
-* Caching mekanizması
-* Rate limit yönetimi
- </td> </tr> </table> 
-🏗️ Architecture
-┌─────────────────────────────────────────────────────────────────┐
-│                        IOC Enricher Agent                        │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ┌──────────┐    ┌──────────────┐    ┌──────────────────────┐  │
-│  │  Input   │───▶│   Enricher   │───▶│    AI Analyzer       │  │
-│  │  Parser  │    │    Engine    │    │    (LangChain)       │  │
-│  └──────────┘    └──────────────┘    └──────────────────────┘  │
-│       │                 │                       │               │
-│       ▼                 ▼                       ▼               │
-│  ┌──────────┐    ┌──────────────┐    ┌──────────────────────┐  │
-│  │   IOC    │    │   External   │    │      Reporter        │  │
-│  │Validator │    │    APIs      │    │   (JSON/MD/HTML)     │  │
-│  └──────────┘    └──────────────┘    └──────────────────────┘  │
-│                         │                                       │
-│         ┌───────────────┼───────────────┐                      │
-│         ▼               ▼               ▼                      │
-│   ┌──────────┐   ┌──────────┐   ┌──────────┐                  │
-│   │VirusTotal│   │ AbuseIPDB│   │  Shodan  │   ...            │
-│   └──────────┘   └──────────┘   └──────────┘                  │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
+| Metrik | Değer |
+|--------|-------|
+| ⏱️ Geleneksel | 10-15 dakika/IOC |
+| ⚡ IOC Enricher | 5-10 saniye/IOC |
+| 📈 Verimlilik Artışı | %98+ |
 
-📦 Installation
-Prerequisites
-* Python 3.11 veya üzeri
-* pip paket yöneticisi
-* API anahtarları (aşağıya bakın)
-Quick Start
+---
+
+## ✨ Özellikler
+
+### 🔎 Multi-Source Intelligence
+- VirusTotal entegrasyonu
+- AbuseIPDB reputation kontrolü
+- Shodan port/servis bilgisi
+- AlienVault OTX threat feeds
+- GreyNoise classification
+
+### 🤖 AI-Powered Analysis
+- LLM ile tehdit özeti oluşturma
+- Risk skorlama algoritması
+- Öneri ve aksiyon önerileri
+- Bağlamsal analiz
+
+### 📊 Reporting
+- JSON/Markdown/HTML çıktı formatları
+- Görsel dashboard
+- Export seçenekleri
+- API endpoint desteği
+
+### ⚡ Performance
+- Asenkron API çağrıları
+- Batch processing desteği
+- Caching mekanizması
+- Rate limit yönetimi
+
+---
+
+## 📦 Kurulum
+
+### Gereksinimler
+
+- Python 3.11 veya üzeri
+- pip paket yöneticisi
+- API anahtarları (aşağıya bakın)
+
+### Hızlı Başlangıç
+
+```bash
 # Repository'yi klonla
 git clone https://github.com/cyb3rkan/ioc-enricher-agent.git
 cd ioc-enricher-agent
@@ -87,23 +81,29 @@ pip install -r requirements.txt
 # Environment değişkenlerini ayarla
 cp .env.example .env
 # .env dosyasını düzenle ve API key'lerini ekle
+```
 
-🔑 API Keys
+---
+
+## 🔑 API Anahtarları
+
 Bu araç aşağıdaki servislerin API anahtarlarını kullanır:
----------------------------------------------
-| |Servis | |Gereklilik | |Ücretsiz Plan | |Kayıt Linki |
----------------------------------------------
-| |VirusTotal | |⭐ Zorunlu | |✅ 500 req/gün | |virustotal.com(https://www.virustotal.com/gui/join-us) |
----------------------------------------------
-| |AbuseIPDB | |⭐ Zorunlu | |✅ 1000 req/gün | |abuseipdb.com(https://www.abuseipdb.com/register) |
----------------------------------------------
-| |Shodan | |📌 Önerilen | |✅ Sınırlı | |shodan.io(https://account.shodan.io/register) |
----------------------------------------------
-| |OpenAI | |⭐ Zorunlu | |❌ Ücretli | |platform.openai.com(https://platform.openai.com/signup) |
----------------------------------------------
-| |AlienVault OTX | |📌 Önerilen | |✅ Ücretsiz | |otx.alienvault.com(https://otx.alienvault.com/accounts/signup/) |
-🚀 Usage
-CLI Kullanımı
+
+| Servis | Gereklilik | Ücretsiz Plan | Kayıt Linki |
+|--------|------------|---------------|-------------|
+| VirusTotal | ⭐ Zorunlu | ✅ 500 req/gün | [virustotal.com](https://www.virustotal.com/gui/join-us) |
+| AbuseIPDB | ⭐ Zorunlu | ✅ 1000 req/gün | [abuseipdb.com](https://www.abuseipdb.com/register) |
+| Shodan | 📌 Önerilen | ✅ Sınırlı | [shodan.io](https://account.shodan.io/register) |
+| OpenAI | ⭐ Zorunlu | ❌ Ücretli | [platform.openai.com](https://platform.openai.com/signup) |
+| AlienVault OTX | 📌 Önerilen | ✅ Ücretsiz | [otx.alienvault.com](https://otx.alienvault.com/accounts/signup/) |
+
+---
+
+## 🚀 Kullanım
+
+### CLI Kullanımı
+
+```bash
 # Tek bir IP analizi
 python ioc_enricher.py --ip 8.8.8.8
 
@@ -116,13 +116,13 @@ python ioc_enricher.py --hash 44d88612fea8a8f36de82e1278abb02f
 # Dosyadan toplu analiz
 python ioc_enricher.py --file iocs.txt
 
-# JSON çıktı
+# JSON çıktı formatı
 python ioc_enricher.py --ip 8.8.8.8 --output json
+```
 
-# Detaylı rapor
-python ioc_enricher.py --ip 8.8.8.8 --verbose --report
+### Python API
 
-Python API
+```python
 from ioc_enricher import IOCEnricher
 
 # Enricher'ı başlat
@@ -130,15 +130,14 @@ enricher = IOCEnricher()
 
 # IP analizi
 result = enricher.analyze_ip("185.220.101.1")
-print(result.risk_score)  # 0-100 arası risk skoru
-print(result.summary)     # AI tarafından oluşturulan özet
+print(result.risk_score)       # 0-100 arası risk skoru
+print(result.summary)          # AI tarafından oluşturulan özet
 print(result.recommendations)  # Aksiyon önerileri
+```
 
-# Batch analizi
-iocs = ["8.8.8.8", "malware.com", "abc123hash"]
-results = enricher.analyze_batch(iocs)
+### Örnek Çıktı
 
-Örnek Çıktı
+```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                    IOC ENRICHMENT REPORT                         ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -148,69 +147,78 @@ results = enricher.analyze_batch(iocs)
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  🎯 RISK SCORE: 87/100 (HIGH)                                   ║
-║  ████████████████████░░░░                                        ║
 ║                                                                  ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  📊 INTELLIGENCE SOURCES                                         ║
-║  ├─ VirusTotal: 12/89 engines flagged as malicious              ║
-║  ├─ AbuseIPDB: Confidence Score 95%, 847 reports                ║
-║  ├─ Shodan: Tor Exit Node, Ports: 22, 80, 443, 9001             ║
-║  └─ OTX: Associated with 3 active threat campaigns              ║
-║                                                                  ║
+║  • VirusTotal: 12/89 engines flagged as malicious               ║
+║  • AbuseIPDB: Confidence Score 95%, 847 reports                 ║
+║  • Shodan: Tor Exit Node, Ports: 22, 80, 443, 9001              ║
+║  • OTX: Associated with 3 active threat campaigns               ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  🤖 AI ANALYSIS                                                  ║
 ║                                                                  ║
 ║  Bu IP adresi bilinen bir Tor çıkış noktasıdır ve birden        ║
 ║  fazla threat intelligence kaynağında kötü amaçlı aktivite      ║
-║  ile ilişkilendirilmiştir. Son 30 günde brute-force ve          ║
-║  web scanning aktivitesi raporlanmıştır.                        ║
-║                                                                  ║
+║  ile ilişkilendirilmiştir.                                      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  ⚡ RECOMMENDATIONS                                              ║
 ║  • Bu IP'yi firewall'da bloklayın                               ║
 ║  • İlgili sistemlerde log analizi yapın                         ║
 ║  • EDR/SIEM'de alert kuralı oluşturun                          ║
-║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
+```
 
-📁 Project Structure
+---
+
+## 📁 Proje Yapısı
+
+```
 ioc-enricher-agent/
-├── 📂 src/
-│   ├── 📄 __init__.py
-│   ├── 📄 enricher.py        # Ana enrichment motoru
-│   ├── 📄 analyzer.py        # AI analiz modülü
-│   ├── 📄 reporter.py        # Rapor oluşturucu
-│   └── 📂 providers/         # API entegrasyonları
-│       ├── 📄 virustotal.py
-│       ├── 📄 abuseipdb.py
-│       ├── 📄 shodan.py
-│       └── 📄 otx.py
-├── 📂 tests/
-│   ├── 📄 test_enricher.py
-│   └── 📄 test_providers.py
-├── 📂 assets/
-│   ├── 🖼️ banner.png
-│   └── 🎬 demo.gif
-├── 📄 ioc_enricher.py        # CLI entry point
-├── 📄 requirements.txt
-├── 📄 .env.example
-├── 📄 LICENSE
-└── 📄 README.md
+├── src/
+│   ├── __init__.py
+│   ├── enricher.py        # Ana enrichment motoru
+│   ├── analyzer.py        # AI analiz modülü
+│   ├── reporter.py        # Rapor oluşturucu
+│   └── providers/         # API entegrasyonları
+│       ├── virustotal.py
+│       ├── abuseipdb.py
+│       ├── shodan.py
+│       └── otx.py
+├── tests/
+│   ├── test_enricher.py
+│   └── test_providers.py
+├── ioc_enricher.py        # CLI entry point
+├── requirements.txt
+├── .env.example
+├── LICENSE
+└── README.md
+```
 
-🛣️ Roadmap
-* [x] Temel IOC parsing (IP, Domain, Hash)
-* [x] VirusTotal entegrasyonu
-* [x] AbuseIPDB entegrasyonu
-* [ ] Shodan entegrasyonu
-* [ ] AlienVault OTX entegrasyonu
-* [ ] AI-powered analiz (LangChain)
-* [ ] Web arayüzü (Streamlit)
-* [ ] REST API endpoint
-* [ ] Docker container
-* [ ] Batch processing optimizasyonu
-🤝 Contributing
+---
+
+## 🛣️ Yol Haritası
+
+- [x] Temel IOC parsing (IP, Domain, Hash)
+- [x] VirusTotal entegrasyonu
+- [x] AbuseIPDB entegrasyonu
+- [ ] Shodan entegrasyonu
+- [ ] AlienVault OTX entegrasyonu
+- [ ] AI-powered analiz (LangChain)
+- [ ] Web arayüzü (Streamlit)
+- [ ] REST API endpoint
+- [ ] Docker container
+- [ ] Batch processing optimizasyonu
+
+---
+
+## 🤝 Katkıda Bulunma
+
 Katkılarınızı bekliyoruz! Lütfen önce bir issue açarak neyi değiştirmek istediğinizi tartışalım.
-# Fork'layın
+
+```bash
+# Fork'layın ve klonlayın
+git clone https://github.com/YOUR_USERNAME/ioc-enricher-agent.git
+
 # Feature branch oluşturun
 git checkout -b feature/amazing-feature
 
@@ -221,13 +229,28 @@ git commit -m 'feat: add amazing feature'
 git push origin feature/amazing-feature
 
 # Pull Request açın
+```
 
-📜 License
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için LICENSE(https://claude.ai/chat/LICENSE) dosyasına bakın.
-⚠️ Disclaimer
-Bu araç yalnızca eğitim ve yetkili güvenlik testi amaçlıdır. Yetkisiz sistemlerde kullanımı yasa dışıdır. Kullanıcılar, bu aracı kullanırken tüm geçerli yasalara uymakla yükümlüdür.
- <div align="center"> 
-⬆ Başa Dön(https://claude.ai/chat/0fc71e36-eee4-4ef3-827b-8cff92baf87a#-ioc-enricher-agent)
-Made with ❤️ by İSİM(https://github.com/cyb3rkan)
+---
 
- </div>
+## 📜 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+---
+
+## ⚠️ Sorumluluk Reddi
+
+Bu araç **yalnızca eğitim ve yetkili güvenlik testi amaçlıdır**. Yetkisiz sistemlerde kullanımı yasa dışıdır. Kullanıcılar, bu aracı kullanırken tüm geçerli yasalara uymakla yükümlüdür.
+
+---
+
+## 📫 İletişim
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erkansahin23/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sahinerkan2312@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cyb3rkan)
+
+---
+
+**⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
