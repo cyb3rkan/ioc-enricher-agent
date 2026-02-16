@@ -1,0 +1,18 @@
+# Example IOCs for testing
+# Lines starting with # are ignored
+
+# IP Addresses
+8.8.8.8
+1.1.1.1
+185.220.101.1
+
+# Domains
+google.com
+malware-traffic-analysis.net
+
+# File Hashes (MD5)
+44d88612fea8a8f36de82e1278abb02f
+
+# URLs
+http://example.com
+https://www.virustotal.com
