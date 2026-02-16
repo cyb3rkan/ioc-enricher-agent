@@ -1,6 +1,5 @@
 # 🔍 IOC Enricher Agent
 
-<<<<<<< HEAD
 **AI-Powered Threat Intelligence Aggregation & Analysis Tool**
 
 A professional cybersecurity tool that aggregates data from multiple threat intelligence providers and uses AI to perform comprehensive Indicator of Compromise (IOC) analysis.
@@ -202,12 +201,10 @@ pip install -r requirements.txt
 # Environment değişkenlerini ayarla
 cp .env.example .env
 # .env dosyasını düzenle ve API key'lerini ekle
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
 ```
 
 ---
 
-<<<<<<< HEAD
 ## 📖 Documentation
 
 - [**Quick Start Guide**](Quick_Start.md) - Get up and running in 5 minutes
@@ -312,12 +309,10 @@ print(result.recommendations)  # Aksiyon önerileri
 ║  • İlgili sistemlerde log analizi yapın                         ║
 ║  • EDR/SIEM'de alert kuralı oluşturun                          ║
 ╚══════════════════════════════════════════════════════════════════╝
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
 ```
 
 ---
 
-<<<<<<< HEAD
 ## 📊 Example Output
 
 ```
@@ -351,34 +346,28 @@ Tags: tor-exit-node, malicious, high-risk
 ## 🏗️ Architecture
 =======
 ## 📁 Proje Yapısı
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
 
 ```
 ioc-enricher-agent/
 ├── src/
-<<<<<<< HEAD
 │   ├── analyzer.py      # AI analysis engine
 │   ├── enricher.py      # Main orchestrator
 │   ├── reporter.py      # Multi-format reporting
 │   ├── validators.py    # IOC validation
 │   ├── config.py        # Configuration management
 │   └── providers/       # Threat intelligence integrations
-=======
 │   ├── __init__.py
 │   ├── enricher.py        # Ana enrichment motoru
 │   ├── analyzer.py        # AI analiz modülü
 │   ├── reporter.py        # Rapor oluşturucu
 │   └── providers/         # API entegrasyonları
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
 │       ├── virustotal.py
 │       ├── abuseipdb.py
 │       ├── shodan.py
 │       └── otx.py
-<<<<<<< HEAD
 ├── tests/               # Unit tests
 ├── main.py             # CLI interface
 └── test_all.py         # Test suite
-=======
 ├── tests/
 │   ├── test_enricher.py
 │   └── test_providers.py
@@ -387,12 +376,10 @@ ioc-enricher-agent/
 ├── .env.example
 ├── LICENSE
 └── README.md
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
 ```
 
 ---
 
-<<<<<<< HEAD
 ## 🔑 API Keys
 
 Get your free API keys:
@@ -514,4 +501,3 @@ Bu araç **yalnızca eğitim ve yetkili güvenlik testi amaçlıdır**. Yetkisiz
 ---
 
 **⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
->>>>>>> 8111a7a73dd051fd2bbad2a114d39d5a41b183c2
