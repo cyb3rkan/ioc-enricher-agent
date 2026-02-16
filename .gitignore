@@ -1,9 +1,15 @@
-# Python
+# =====================
+# Python core
+# =====================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# =====================
+# Build / packaging
+# =====================
 build/
 develop-eggs/
 dist/
@@ -16,68 +22,111 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environment
+# =====================
+# Virtual environments
+# =====================
 venv/
 ENV/
 env/
 .venv
+.env
+.env.local
+.envrc
+env.bak/
+venv.bak/
 
-# IDE
+# =====================
+# IDE / Editor
+# =====================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
+Thumbs.db
+.spyderproject
+.spyproject
+.ropeproject
 
-# Logs
+# =====================
+# Logs & cache
+# =====================
 *.log
 logs/*.log
-
-# Cache
+*.cache
+.cache
 data/cache/*
 !data/cache/.gitkeep
-*.cache
 
+# =====================
 # Reports
+# =====================
 reports/*
 !reports/.gitkeep
 
-# Environment variables
-.env
-.env.local
-
-# Test coverage
+# =====================
+# Test / coverage
+# =====================
 .coverage
+.coverage.*
 htmlcov/
 .pytest_cache/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+# =====================
+# Docs / notebooks
+# =====================
+docs/_build/
+.ipynb_checkpoints
 
-# Temporary files
-*.tmp
-*.bak
-*.swp
-~*
+# =====================
+# Framework leftovers
+# =====================
+instance/
+.webassets-cache
+.scrapy
+.pybuilder/
+target/
+site/
 
-# OS files
-Thumbs.db
-.DS_Store
+# =====================
+# Type checkers / linters
+# =====================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# =====================
+# Dependency managers
+# =====================
+.pdm-python
+.pdm-build/
+__pypackages__/
+.pixi
+
+# =====================
+# Misc
+# =====================
+.pypirc
+.cursorignore
+.cursorindexingignore
+.abstra/
+marimo/_static/
+marimo/_lsp/
+__marimo__/
