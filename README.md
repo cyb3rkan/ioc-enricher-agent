@@ -1,133 +1,13 @@
 # 🔍 IOC Enricher Agent
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge)
+![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge&logo=openai&logoColor=white)
+
 **AI-Powered Threat Intelligence Aggregation & Analysis Tool**
 
 A professional cybersecurity tool that aggregates data from multiple threat intelligence providers and uses AI to perform comprehensive Indicator of Compromise (IOC) analysis.
-
-![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-production-brightgreen)
-
----
-
-## 🌟 Features
-
-### 🎯 Core Capabilities
-- **Multi-Provider Integration**: Aggregates data from 4+ threat intelligence sources
-  - VirusTotal
-  - AbuseIPDB
-  - Shodan
-  - AlienVault OTX
-  
-- **AI-Powered Analysis**: Intelligent risk assessment using OpenAI GPT or Google Gemini
-  - Automated risk scoring (0-100)
-  - Severity classification (LOW/MEDIUM/HIGH/CRITICAL)
-  - Turkish and English summaries
-  - Actionable recommendations
-  
-- **Multi-Format Reporting**
-  - Colorful terminal output
-  - JSON export
-  - Markdown reports
-  
-- **Batch Processing**: Analyze multiple IOCs in parallel
-- **Resilient Architecture**: Graceful degradation when providers fail
-
-### 🔎 Supported IOC Types
-- IPv4 & IPv6 addresses
-- Domain names
-- URLs
-- File hashes (MD5, SHA1, SHA256)
-- Email addresses
-
----
-
-## 📊 Quick Stats
-
-- **3,000+ Lines of Code**
-- **15 Python Modules**
-- **42 Test Cases**
-- **7 API Integrations**
-- **95%+ Test Pass Rate**
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.11 or higher
-- pip package manager
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/ioc-enricher-agent.git
-cd ioc-enricher-agent
-
-# Create virtual environment (recommended)
-python -m venv venv
-
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Configuration
-
-1. Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-
-2. Add your API keys to `.env`:
-```bash
-VIRUSTOTAL_API_KEY=your_key_here
-ABUSEIPDB_API_KEY=your_key_here
-SHODAN_API_KEY=your_key_here
-OTX_API_KEY=your_key_here
-OPENAI_API_KEY=your_key_here  # or use Gemini
-```
-
-3. Choose your AI provider:
-```bash
-AI_PROVIDER=openai  # or gemini
-```
-
-### Usage
-
-```bash
-# Check provider status
-python main.py --status
-
-# Analyze single IOC
-python main.py --ip 8.8.8.8
-python main.py --domain google.com
-python main.py --hash 44d88612fea8a8f36de82e1278abb02f
-
-# Auto-detect IOC type
-python main.py --ioc 1.1.1.1
-
-# Batch processing
-python main.py --file example_iocs.txt
-
-# Save reports
-python main.py --ip 8.8.8.8 --format json --save
-python main.py --ip 8.8.8.8 --format markdown --save
-=======
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge)
-![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge&logo=openai&logoColor=white)
-
-**AI-Powered Indicator of Compromise (IOC) Enrichment Tool**
-
-Siber güvenlik analistlerinin manuel olarak yaptığı IOC zenginleştirme işlemlerini saniyeler içinde otomatize eden bir AI agent.
 
 ---
 
@@ -147,36 +27,54 @@ Tek bir komutla tüm platformlardan veri toplanır, analiz edilir ve saniyeler i
 
 ---
 
+## 📊 Hızlı İstatistikler
+
+- **3,000+ Satır Kod**
+- **15 Python Modülü**
+- **42 Test Durumu**
+- **7 API Entegrasyonu**
+- **%95+ Test Başarı Oranı**
+
+---
+
 ## ✨ Özellikler
 
 ### 🔎 Multi-Source Intelligence
-- VirusTotal entegrasyonu
-- AbuseIPDB reputation kontrolü
-- Shodan port/servis bilgisi
-- AlienVault OTX threat feeds
-- GreyNoise classification
+- **VirusTotal**: Dosya ve URL analizi
+- **AbuseIPDB**: IP reputation kontrolü
+- **Shodan**: Port/servis bilgisi
+- **AlienVault OTX**: Threat feeds
+- **GreyNoise**: Classification
 
 ### 🤖 AI-Powered Analysis
-- LLM ile tehdit özeti oluşturma
-- Risk skorlama algoritması
-- Öneri ve aksiyon önerileri
-- Bağlamsal analiz
+- **OpenAI GPT** veya **Google Gemini** ile tehdit analizi
+- Otomatik risk skorlama (0-100)
+- Severity sınıflandırması (LOW/MEDIUM/HIGH/CRITICAL)
+- Türkçe ve İngilizce özetler
+- Aksiyon önerileri
 
-### 📊 Reporting
-- JSON/Markdown/HTML çıktı formatları
-- Görsel dashboard
-- Export seçenekleri
-- API endpoint desteği
+### 📊 Multi-Format Reporting
+- Renkli terminal çıktısı
+- JSON export
+- Markdown raporları
+- HTML dashboard (yakında)
 
 ### ⚡ Performance
 - Asenkron API çağrıları
 - Batch processing desteği
-- Caching mekanizması
-- Rate limit yönetimi
+- Resilient architecture (provider fail-safe)
+- Paralel IOC analizi
+
+### 🔎 Desteklenen IOC Tipleri
+- IPv4 & IPv6 adresleri
+- Domain isimleri
+- URL'ler
+- File hash'ler (MD5, SHA1, SHA256)
+- Email adresleri
 
 ---
 
-## 📦 Kurulum
+## 🚀 Kurulum
 
 ### Gereksinimler
 
@@ -193,7 +91,12 @@ cd ioc-enricher-agent
 
 # Virtual environment oluştur
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Virtual environment'ı aktifleştir
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
 
 # Bağımlılıkları yükle
 pip install -r requirements.txt
@@ -205,29 +108,6 @@ cp .env.example .env
 
 ---
 
-## 📖 Documentation
-
-- [**Quick Start Guide**](Quick_Start.md) - Get up and running in 5 minutes
-- [**Testing Guide**](ReadMe_Test.md) - Comprehensive testing documentation
-- [**Network Troubleshooting**](Network_Problems.md) - Fix common connection issues
-- [**Main Documentation**](ReadMe_Main.md) - Detailed feature documentation
-
----
-
-## 🧪 Testing
-
-Run the comprehensive test suite:
-
-```bash
-python test_all.py
-```
-
-Expected output:
-```
-Total Tests: 42
-Passed: 40+ ✅
-Pass Rate: 95%+
-=======
 ## 🔑 API Anahtarları
 
 Bu araç aşağıdaki servislerin API anahtarlarını kullanır:
@@ -237,36 +117,65 @@ Bu araç aşağıdaki servislerin API anahtarlarını kullanır:
 | VirusTotal | ⭐ Zorunlu | ✅ 500 req/gün | [virustotal.com](https://www.virustotal.com/gui/join-us) |
 | AbuseIPDB | ⭐ Zorunlu | ✅ 1000 req/gün | [abuseipdb.com](https://www.abuseipdb.com/register) |
 | Shodan | 📌 Önerilen | ✅ Sınırlı | [shodan.io](https://account.shodan.io/register) |
-| OpenAI | ⭐ Zorunlu | ❌ Ücretli | [platform.openai.com](https://platform.openai.com/signup) |
-| AlienVault OTX | 📌 Önerilen | ✅ Ücretsiz | [otx.alienvault.com](https://otx.alienvault.com/accounts/signup/) |
+| AlienVault OTX | 📌 Önerilen | ✅ Ücretsiz | [otx.alienvault.com](https://otx.alienvault.com/api) |
+| OpenAI | ⭐ Zorunlu* | ❌ Ücretli | [platform.openai.com](https://platform.openai.com/signup) |
+| Google Gemini | ⭐ Zorunlu* | ✅ Ücretsiz | [aistudio.google.com](https://aistudio.google.com/app/apikey) |
+
+*OpenAI veya Gemini'den birini seçmeniz yeterli
+
+### Configuration
+
+`.env` dosyanıza API anahtarlarınızı ekleyin:
+
+```bash
+# Threat Intelligence Providers
+VIRUSTOTAL_API_KEY=your_key_here
+ABUSEIPDB_API_KEY=your_key_here
+SHODAN_API_KEY=your_key_here
+OTX_API_KEY=your_key_here
+
+# AI Provider (birini seçin)
+AI_PROVIDER=openai  # veya gemini
+OPENAI_API_KEY=your_key_here  # OpenAI kullanıyorsanız
+GEMINI_API_KEY=your_key_here  # Gemini kullanıyorsanız
+```
 
 ---
 
-## 🚀 Kullanım
+## 💻 Kullanım
 
 ### CLI Kullanımı
 
 ```bash
+# Provider durumunu kontrol et
+python main.py --status
+
 # Tek bir IP analizi
-python ioc_enricher.py --ip 8.8.8.8
+python main.py --ip 8.8.8.8
 
 # Domain analizi
-python ioc_enricher.py --domain malicious-site.com
+python main.py --domain malicious-site.com
 
 # Hash analizi
-python ioc_enricher.py --hash 44d88612fea8a8f36de82e1278abb02f
+python main.py --hash 44d88612fea8a8f36de82e1278abb02f
+
+# IOC tipini otomatik algıla
+python main.py --ioc 1.1.1.1
 
 # Dosyadan toplu analiz
-python ioc_enricher.py --file iocs.txt
+python main.py --file example_iocs.txt
 
-# JSON çıktı formatı
-python ioc_enricher.py --ip 8.8.8.8 --output json
+# JSON formatında kaydet
+python main.py --ip 8.8.8.8 --format json --save
+
+# Markdown rapor oluştur
+python main.py --ip 8.8.8.8 --format markdown --save
 ```
 
 ### Python API
 
 ```python
-from ioc_enricher import IOCEnricher
+from src.enricher import IOCEnricher
 
 # Enricher'ı başlat
 enricher = IOCEnricher()
@@ -276,9 +185,15 @@ result = enricher.analyze_ip("185.220.101.1")
 print(result.risk_score)       # 0-100 arası risk skoru
 print(result.summary)          # AI tarafından oluşturulan özet
 print(result.recommendations)  # Aksiyon önerileri
+
+# Batch processing
+iocs = ["8.8.8.8", "1.1.1.1", "malicious.com"]
+results = enricher.analyze_batch(iocs)
 ```
 
-### Örnek Çıktı
+---
+
+## 📊 Örnek Çıktı
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
@@ -286,7 +201,7 @@ print(result.recommendations)  # Aksiyon önerileri
 ╠══════════════════════════════════════════════════════════════════╣
 ║  Target: 185.220.101.1                                           ║
 ║  Type: IPv4 Address                                              ║
-║  Analysis Date: 2024-01-15 14:32:00                              ║
+║  Analysis Date: 2024-02-17 14:32:00                              ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  🎯 RISK SCORE: 87/100 (HIGH)                                   ║
@@ -302,161 +217,122 @@ print(result.recommendations)  # Aksiyon önerileri
 ║                                                                  ║
 ║  Bu IP adresi bilinen bir Tor çıkış noktasıdır ve birden        ║
 ║  fazla threat intelligence kaynağında kötü amaçlı aktivite      ║
-║  ile ilişkilendirilmiştir.                                      ║
+║  ile ilişkilendirilmiştir. Yüksek risk seviyesi nedeniyle       ║
+║  acil aksiyon gerektirir.                                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  ⚡ RECOMMENDATIONS                                              ║
 ║  • Bu IP'yi firewall'da bloklayın                               ║
 ║  • İlgili sistemlerde log analizi yapın                         ║
 ║  • EDR/SIEM'de alert kuralı oluşturun                          ║
+║  • Incident response prosedürünü başlatın                       ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 📊 Example Output
-
-```
-🔍 IOC ENRICHMENT REPORT
-
-Target: 185.220.101.1
-Type: IPV4
-🎯 RISK SCORE: 55/100 🔴 HIGH
-
-📊 THREAT INTELLIGENCE SOURCES
-✓ VirusTotal
-  └─ Detection: 14 malicious / 93 engines
-
-✓ AbuseIPDB
-  └─ Confidence Score: 100%, Total Reports: 178
-
-🤖 AI ANALYSIS
-This IP is associated with malicious activity. Multiple threat 
-intelligence sources flag it as high-risk. Immediate action recommended.
-
-⚡ RECOMMENDATIONS
-  • Block this IP at firewall level
-  • Review logs for any connections
-  • Alert security team
-
-Tags: tor-exit-node, malicious, high-risk
-```
-
----
-
-## 🏗️ Architecture
-=======
 ## 📁 Proje Yapısı
 
 ```
 ioc-enricher-agent/
 ├── src/
-│   ├── analyzer.py      # AI analysis engine
-│   ├── enricher.py      # Main orchestrator
-│   ├── reporter.py      # Multi-format reporting
-│   ├── validators.py    # IOC validation
-│   ├── config.py        # Configuration management
-│   └── providers/       # Threat intelligence integrations
 │   ├── __init__.py
 │   ├── enricher.py        # Ana enrichment motoru
 │   ├── analyzer.py        # AI analiz modülü
 │   ├── reporter.py        # Rapor oluşturucu
+│   ├── config.py          # Configuration yönetimi
+│   ├── validators.py      # IOC validation
 │   └── providers/         # API entegrasyonları
+│       ├── __init__.py
+│       ├── base.py
 │       ├── virustotal.py
 │       ├── abuseipdb.py
 │       ├── shodan.py
 │       └── otx.py
-├── tests/               # Unit tests
-├── main.py             # CLI interface
-└── test_all.py         # Test suite
 ├── tests/
+│   ├── __init__.py
 │   ├── test_enricher.py
+│   ├── test_analyzer.py
 │   └── test_providers.py
-├── ioc_enricher.py        # CLI entry point
+├── data/
+│   └── cache/
+├── docs/
+│   ├── Quick_Start.md
+│   ├── ReadMe_Test.md
+│   ├── ReadMe_Main.md
+│   └── Network_Problems.md
+├── logs/
+├── reports/
+├── main.py                # CLI entry point
+├── test_all.py            # Test suite runner
 ├── requirements.txt
 ├── .env.example
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 🔑 API Keys
+## 📖 Dokümantasyon
 
-Get your free API keys:
-
-- [VirusTotal](https://www.virustotal.com/gui/join-us)
-- [AbuseIPDB](https://www.abuseipdb.com/register)
-- [Shodan](https://account.shodan.io/register)
-- [AlienVault OTX](https://otx.alienvault.com/api)
-- [OpenAI](https://platform.openai.com/signup)
-- [Google Gemini](https://aistudio.google.com/app/apikey)
+- [**Quick Start Guide**](docs/Quick_Start.md) - 5 dakikada başla
+- [**Testing Guide**](docs/ReadMe_Test.md) - Kapsamlı test dokümantasyonu
+- [**Network Troubleshooting**](docs/Network_Problems.md) - Bağlantı sorunlarını çöz
+- [**Main Documentation**](docs/ReadMe_Main.md) - Detaylı özellik dokümantasyonu
 
 ---
 
-## 🛡️ Security
+## 🧪 Testing
 
-- API keys stored in `.env` (git-ignored)
-- No data persistence (privacy-first)
+Kapsamlı test suite'ini çalıştırın:
+
+```bash
+# Tüm testleri çalıştır
+python test_all.py
+
+# Sadece unit testler
+pytest tests/test_enricher.py
+
+# Coverage raporu ile
+pytest --cov=src tests/
+```
+
+Beklenen sonuç:
+```
+Total Tests: 42
+Passed: 40+ ✅
+Pass Rate: 95%+
+```
+
+---
+
+## 🛡️ Güvenlik
+
+- API anahtarları `.env` dosyasında güvenli şekilde saklanır (git-ignored)
+- Veri persistence yok (privacy-first)
 - Timeout protection
-- Rate limiting support
-- Error handling and fallback mechanisms
+- Rate limiting desteği
+- Error handling ve fallback mekanizmaları
+- No data logging
 
 ---
 
-## 🤝 Contributing
-
-Contributions welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- VirusTotal for comprehensive malware detection
-- AbuseIPDB for IP reputation data
-- Shodan for infrastructure intelligence
-- AlienVault OTX for threat pulse data
-- OpenAI & Google for AI analysis capabilities
-
----
-
-## 📧 Contact
-
-For questions, issues, or suggestions, please open an issue on GitHub.
-
----
-
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star!
-
----
-
-**Built with ❤️ for the cybersecurity community**
-=======
 ## 🛣️ Yol Haritası
 
 - [x] Temel IOC parsing (IP, Domain, Hash)
 - [x] VirusTotal entegrasyonu
 - [x] AbuseIPDB entegrasyonu
-- [ ] Shodan entegrasyonu
-- [ ] AlienVault OTX entegrasyonu
-- [ ] AI-powered analiz (LangChain)
+- [x] Shodan entegrasyonu
+- [x] AlienVault OTX entegrasyonu
+- [x] AI-powered analiz (OpenAI & Gemini)
+- [x] Batch processing
+- [x] Multi-format reporting
 - [ ] Web arayüzü (Streamlit)
 - [ ] REST API endpoint
 - [ ] Docker container
-- [ ] Batch processing optimizasyonu
+- [ ] CI/CD pipeline
+- [ ] GreyNoise entegrasyonu
+- [ ] Dashboard visualizations
 
 ---
 
@@ -480,6 +356,13 @@ git push origin feature/amazing-feature
 # Pull Request açın
 ```
 
+### Contribution Guidelines
+
+1. Kod standardına uyun (PEP 8)
+2. Test coverage'ı koruyun (%90+)
+3. Dokümantasyon güncelleyin
+4. Commit mesajlarında conventional commits kullanın
+
 ---
 
 ## 📜 Lisans
@@ -492,12 +375,40 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 Bu araç **yalnızca eğitim ve yetkili güvenlik testi amaçlıdır**. Yetkisiz sistemlerde kullanımı yasa dışıdır. Kullanıcılar, bu aracı kullanırken tüm geçerli yasalara uymakla yükümlüdür.
 
+**Bu araç:**
+- Yalnızca meşru güvenlik araştırmaları için tasarlanmıştır
+- Kötü amaçlı kullanım için tasarlanmamıştır
+- Kullanıcının sorumluluğundadır
+
 ---
 
-## 📫 İletişim
+## 🙏 Teşekkürler
+
+- VirusTotal - Kapsamlı malware detection için
+- AbuseIPDB - IP reputation verisi için
+- Shodan - Infrastructure intelligence için
+- AlienVault OTX - Threat pulse data için
+- OpenAI & Google - AI analiz yetenekleri için
+
+---
+
+## 📧 İletişim
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erkansahin23/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cyb3rkan)
+
+Sorular, sorunlar veya öneriler için lütfen GitHub'da bir issue açın.
 
 ---
 
-**⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
+## ⭐ Star History
+
+Bu projeyi faydalı bulduysanız, lütfen yıldız vermeyi düşünün!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=cyb3rkan/ioc-enricher-agent&type=Date)](https://star-history.com/#cyb3rkan/ioc-enricher-agent&Date)
+
+---
+
+**Built with ❤️ for the cybersecurity community**
+
+*Making threat intelligence accessible to everyone*
