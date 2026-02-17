@@ -421,12 +421,6 @@ For questions, issues, or suggestions, please open an issue on GitHub.
 
 ---
 
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=cyb3rkan/ioc-enricher-agent&type=Date)](https://star-history.com/#cyb3rkan/ioc-enricher-agent&Date)
-
 ---
 
 <div align="center">
