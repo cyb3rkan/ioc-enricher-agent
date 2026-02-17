@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet?style=for-the-badge&logo=openai&logoColor=white)
 
 **AI-Powered Threat Intelligence Aggregation & Analysis Tool**
@@ -11,121 +11,130 @@ A professional cybersecurity tool that aggregates data from multiple threat inte
 
 ---
 
-## 🎯 Problem ve Çözüm
+## 🎯 Problem Statement & Solution
 
-### ❌ Geleneksel Yöntem
-Bir SOC analisti şüpheli bir IP adresi gördüğünde, manuel olarak 5-6 farklı threat intelligence platformunu kontrol eder. Bu işlem her bir IOC için **10-15 dakika** sürer.
+### ❌ Traditional Method
+When a SOC analyst encounters a suspicious IP address, they must manually check 5-6 different threat intelligence platforms. This process takes **10-15 minutes per IOC**.
 
-### ✅ Bu Araç ile
-Tek bir komutla tüm platformlardan veri toplanır, analiz edilir ve saniyeler içinde kapsamlı bir rapor oluşturulur.
+### ✅ With This Tool
+A single command collects data from all platforms, analyzes it, and generates a comprehensive report in seconds.
 
-| Metrik | Değer |
+| Metric | Value |
 |--------|-------|
-| ⏱️ Geleneksel | 10-15 dakika/IOC |
-| ⚡ IOC Enricher | 5-10 saniye/IOC |
-| 📈 Verimlilik Artışı | %98+ |
+| ⏱️ Traditional Method | 10-15 minutes/IOC |
+| ⚡ IOC Enricher | 5-10 seconds/IOC |
+| 📈 Efficiency Gain | 98%+ |
 
 ---
 
-## 📊 Hızlı İstatistikler
+## 📊 Project Statistics
 
-- **3,000+ Satır Kod**
-- **15 Python Modülü**
-- **42 Test Durumu**
-- **7 API Entegrasyonu**
-- **%95+ Test Başarı Oranı**
+| Category | Details |
+|----------|---------|
+| 📝 Lines of Code | 3,000+ |
+| 🐍 Python Modules | 15 |
+| 🧪 Test Cases | 42 |
+| 🔌 API Integrations | 7 |
+| ✅ Test Pass Rate | 95%+ |
 
 ---
 
-## ✨ Özellikler
+## ✨ Features
 
 ### 🔎 Multi-Source Intelligence
-- **VirusTotal**: Dosya ve URL analizi
-- **AbuseIPDB**: IP reputation kontrolü
-- **Shodan**: Port/servis bilgisi
-- **AlienVault OTX**: Threat feeds
-- **GreyNoise**: Classification
+
+| Provider | Capability |
+|----------|------------|
+| **VirusTotal** | File and URL analysis |
+| **AbuseIPDB** | IP reputation checking |
+| **Shodan** | Port/service information |
+| **AlienVault OTX** | Threat feeds |
+| **GreyNoise** | Classification |
 
 ### 🤖 AI-Powered Analysis
-- **OpenAI GPT** veya **Google Gemini** ile tehdit analizi
-- Otomatik risk skorlama (0-100)
-- Severity sınıflandırması (LOW/MEDIUM/HIGH/CRITICAL)
-- Türkçe ve İngilizce özetler
-- Aksiyon önerileri
+
+- **OpenAI GPT** or **Google Gemini** powered threat analysis
+- Automated risk scoring (0-100)
+- Severity classification (LOW/MEDIUM/HIGH/CRITICAL)
+- Turkish and English summaries
+- Actionable recommendations
 
 ### 📊 Multi-Format Reporting
-- Renkli terminal çıktısı
+
+- Colorful terminal output
 - JSON export
-- Markdown raporları
-- HTML dashboard (yakında)
+- Markdown reports
+- HTML dashboard (coming soon)
 
-### ⚡ Performance
-- Asenkron API çağrıları
-- Batch processing desteği
+### ⚡ Performance Features
+
+- Asynchronous API calls
+- Batch processing support
 - Resilient architecture (provider fail-safe)
-- Paralel IOC analizi
+- Parallel IOC analysis
 
-### 🔎 Desteklenen IOC Tipleri
-- IPv4 & IPv6 adresleri
-- Domain isimleri
-- URL'ler
-- File hash'ler (MD5, SHA1, SHA256)
-- Email adresleri
+### 🔎 Supported IOC Types
+
+- IPv4 & IPv6 addresses
+- Domain names
+- URLs
+- File hashes (MD5, SHA1, SHA256)
+- Email addresses
 
 ---
 
-## 🚀 Kurulum
+## 🚀 Installation
 
-### Gereksinimler
+### Prerequisites
 
-- Python 3.11 veya üzeri
-- pip paket yöneticisi
-- API anahtarları (aşağıya bakın)
+- Python 3.11 or higher
+- pip package manager
+- API keys (see below)
 
-### Hızlı Başlangıç
+### Quick Start
 
 ```bash
-# Repository'yi klonla
+# Clone the repository
 git clone https://github.com/cyb3rkan/ioc-enricher-agent.git
 cd ioc-enricher-agent
 
-# Virtual environment oluştur
+# Create virtual environment
 python -m venv venv
 
-# Virtual environment'ı aktifleştir
+# Activate virtual environment
 # Windows:
 venv\Scripts\activate
 # Linux/Mac:
 source venv/bin/activate
 
-# Bağımlılıkları yükle
+# Install dependencies
 pip install -r requirements.txt
 
-# Environment değişkenlerini ayarla
+# Setup environment variables
 cp .env.example .env
-# .env dosyasını düzenle ve API key'lerini ekle
+# Edit .env file and add your API keys
 ```
 
 ---
 
-## 🔑 API Anahtarları
+## 🔑 API Keys
 
-Bu araç aşağıdaki servislerin API anahtarlarını kullanır:
+This tool uses API keys from the following services:
 
-| Servis | Gereklilik | Ücretsiz Plan | Kayıt Linki |
-|--------|------------|---------------|-------------|
-| VirusTotal | ⭐ Zorunlu | ✅ 500 req/gün | [virustotal.com](https://www.virustotal.com/gui/join-us) |
-| AbuseIPDB | ⭐ Zorunlu | ✅ 1000 req/gün | [abuseipdb.com](https://www.abuseipdb.com/register) |
-| Shodan | 📌 Önerilen | ✅ Sınırlı | [shodan.io](https://account.shodan.io/register) |
-| AlienVault OTX | 📌 Önerilen | ✅ Ücretsiz | [otx.alienvault.com](https://otx.alienvault.com/api) |
-| OpenAI | ⭐ Zorunlu* | ❌ Ücretli | [platform.openai.com](https://platform.openai.com/signup) |
-| Google Gemini | ⭐ Zorunlu* | ✅ Ücretsiz | [aistudio.google.com](https://aistudio.google.com/app/apikey) |
+| Service | Required | Free Tier | Registration Link |
+|---------|----------|-----------|-------------------|
+| VirusTotal | ⭐ Required | ✅ 500 req/day | [Get Key](https://www.virustotal.com/gui/join-us) |
+| AbuseIPDB | ⭐ Required | ✅ 1000 req/day | [Get Key](https://www.abuseipdb.com/register) |
+| Shodan | 📌 Recommended | ✅ Limited | [Get Key](https://account.shodan.io/register) |
+| AlienVault OTX | 📌 Recommended | ✅ Free | [Get Key](https://otx.alienvault.com/api) |
+| OpenAI | ⭐ Required* | ❌ Paid | [Get Key](https://platform.openai.com/signup) |
+| Google Gemini | ⭐ Required* | ✅ Free | [Get Key](https://aistudio.google.com/app/apikey) |
 
-*OpenAI veya Gemini'den birini seçmeniz yeterli
+*Choose either OpenAI or Gemini
 
 ### Configuration
 
-`.env` dosyanıza API anahtarlarınızı ekleyin:
+Add your API keys to `.env` file:
 
 ```bash
 # Threat Intelligence Providers
@@ -134,41 +143,41 @@ ABUSEIPDB_API_KEY=your_key_here
 SHODAN_API_KEY=your_key_here
 OTX_API_KEY=your_key_here
 
-# AI Provider (birini seçin)
-AI_PROVIDER=openai  # veya gemini
-OPENAI_API_KEY=your_key_here  # OpenAI kullanıyorsanız
-GEMINI_API_KEY=your_key_here  # Gemini kullanıyorsanız
+# AI Provider (choose one)
+AI_PROVIDER=openai  # or gemini
+OPENAI_API_KEY=your_key_here  # if using OpenAI
+GEMINI_API_KEY=your_key_here  # if using Gemini
 ```
 
 ---
 
-## 💻 Kullanım
+## 💻 Usage
 
-### CLI Kullanımı
+### CLI Usage
 
 ```bash
-# Provider durumunu kontrol et
+# Check provider status
 python main.py --status
 
-# Tek bir IP analizi
+# Analyze a single IP
 python main.py --ip 8.8.8.8
 
-# Domain analizi
+# Analyze a domain
 python main.py --domain malicious-site.com
 
-# Hash analizi
+# Analyze a hash
 python main.py --hash 44d88612fea8a8f36de82e1278abb02f
 
-# IOC tipini otomatik algıla
+# Auto-detect IOC type
 python main.py --ioc 1.1.1.1
 
-# Dosyadan toplu analiz
+# Batch analysis from file
 python main.py --file example_iocs.txt
 
-# JSON formatında kaydet
+# Save as JSON
 python main.py --ip 8.8.8.8 --format json --save
 
-# Markdown rapor oluştur
+# Generate Markdown report
 python main.py --ip 8.8.8.8 --format markdown --save
 ```
 
@@ -177,14 +186,14 @@ python main.py --ip 8.8.8.8 --format markdown --save
 ```python
 from src.enricher import IOCEnricher
 
-# Enricher'ı başlat
+# Initialize enricher
 enricher = IOCEnricher()
 
-# IP analizi
+# Analyze IP
 result = enricher.analyze_ip("185.220.101.1")
-print(result.risk_score)       # 0-100 arası risk skoru
-print(result.summary)          # AI tarafından oluşturulan özet
-print(result.recommendations)  # Aksiyon önerileri
+print(result.risk_score)       # Risk score 0-100
+print(result.summary)          # AI-generated summary
+print(result.recommendations)  # Action recommendations
 
 # Batch processing
 iocs = ["8.8.8.8", "1.1.1.1", "malicious.com"]
@@ -193,7 +202,7 @@ results = enricher.analyze_batch(iocs)
 
 ---
 
-## 📊 Örnek Çıktı
+## 📊 Sample Output
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
@@ -215,33 +224,33 @@ results = enricher.analyze_batch(iocs)
 ╠══════════════════════════════════════════════════════════════════╣
 ║  🤖 AI ANALYSIS                                                  ║
 ║                                                                  ║
-║  Bu IP adresi bilinen bir Tor çıkış noktasıdır ve birden        ║
-║  fazla threat intelligence kaynağında kötü amaçlı aktivite      ║
-║  ile ilişkilendirilmiştir. Yüksek risk seviyesi nedeniyle       ║
-║  acil aksiyon gerektirir.                                       ║
+║  This IP address is a known Tor exit node and has been          ║
+║  associated with malicious activity across multiple threat      ║
+║  intelligence sources. High risk level requires immediate       ║
+║  action.                                                        ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  ⚡ RECOMMENDATIONS                                              ║
-║  • Bu IP'yi firewall'da bloklayın                               ║
-║  • İlgili sistemlerde log analizi yapın                         ║
-║  • EDR/SIEM'de alert kuralı oluşturun                          ║
-║  • Incident response prosedürünü başlatın                       ║
+║  • Block this IP at firewall level                              ║
+║  • Review logs for any connections                              ║
+║  • Create alert rule in EDR/SIEM                                ║
+║  • Initiate incident response procedure                         ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
 ioc-enricher-agent/
 ├── src/
 │   ├── __init__.py
-│   ├── enricher.py        # Ana enrichment motoru
-│   ├── analyzer.py        # AI analiz modülü
-│   ├── reporter.py        # Rapor oluşturucu
-│   ├── config.py          # Configuration yönetimi
+│   ├── enricher.py        # Main enrichment engine
+│   ├── analyzer.py        # AI analysis module
+│   ├── reporter.py        # Report generator
+│   ├── config.py          # Configuration management
 │   ├── validators.py      # IOC validation
-│   └── providers/         # API entegrasyonları
+│   └── providers/         # API integrations
 │       ├── __init__.py
 │       ├── base.py
 │       ├── virustotal.py
@@ -273,142 +282,157 @@ ioc-enricher-agent/
 
 ---
 
-## 📖 Dokümantasyon
+## 📖 Documentation
 
-- [**Quick Start Guide**](docs/Quick_Start.md) - 5 dakikada başla
-- [**Testing Guide**](docs/ReadMe_Test.md) - Kapsamlı test dokümantasyonu
-- [**Network Troubleshooting**](docs/Network_Problems.md) - Bağlantı sorunlarını çöz
-- [**Main Documentation**](docs/ReadMe_Main.md) - Detaylı özellik dokümantasyonu
+| Document | Description |
+|----------|-------------|
+| [Quick Start Guide](docs/Quick_Start.md) | Get up and running in 5 minutes |
+| [Testing Guide](docs/ReadMe_Test.md) | Comprehensive testing documentation |
+| [Network Troubleshooting](docs/Network_Problems.md) | Fix connection issues |
+| [Main Documentation](docs/ReadMe_Main.md) | Detailed feature documentation |
 
 ---
 
 ## 🧪 Testing
 
-Kapsamlı test suite'ini çalıştırın:
+Run the comprehensive test suite:
 
 ```bash
-# Tüm testleri çalıştır
+# Run all tests
 python test_all.py
 
-# Sadece unit testler
+# Run unit tests only
 pytest tests/test_enricher.py
 
-# Coverage raporu ile
+# Run with coverage report
 pytest --cov=src tests/
 ```
 
-Beklenen sonuç:
-```
-Total Tests: 42
-Passed: 40+ ✅
-Pass Rate: 95%+
-```
+Expected results:
+
+| Metric | Value |
+|--------|-------|
+| Total Tests | 42 |
+| Passed | 40+ ✅ |
+| Pass Rate | 95%+ |
 
 ---
 
-## 🛡️ Güvenlik
+## 🛡️ Security
 
-- API anahtarları `.env` dosyasında güvenli şekilde saklanır (git-ignored)
-- Veri persistence yok (privacy-first)
-- Timeout protection
-- Rate limiting desteği
-- Error handling ve fallback mekanizmaları
-- No data logging
-
----
-
-## 🛣️ Yol Haritası
-
-- [x] Temel IOC parsing (IP, Domain, Hash)
-- [x] VirusTotal entegrasyonu
-- [x] AbuseIPDB entegrasyonu
-- [x] Shodan entegrasyonu
-- [x] AlienVault OTX entegrasyonu
-- [x] AI-powered analiz (OpenAI & Gemini)
-- [x] Batch processing
-- [x] Multi-format reporting
-- [ ] Web arayüzü (Streamlit)
-- [ ] REST API endpoint
-- [ ] Docker container
-- [ ] CI/CD pipeline
-- [ ] GreyNoise entegrasyonu
-- [ ] Dashboard visualizations
+| Feature | Implementation |
+|---------|----------------|
+| API Key Storage | Secure `.env` file (git-ignored) |
+| Data Persistence | None (privacy-first) |
+| Timeout Protection | ✅ Enabled |
+| Rate Limiting | ✅ Supported |
+| Error Handling | ✅ Comprehensive fallback mechanisms |
+| Data Logging | ❌ Disabled for privacy |
 
 ---
 
-## 🤝 Katkıda Bulunma
+## 🎯 Project Roadmap
 
-Katkılarınızı bekliyoruz! Lütfen önce bir issue açarak neyi değiştirmek istediğinizi tartışalım.
+| Feature | Status |
+|---------|--------|
+| Basic IOC parsing (IP, Domain, Hash) | ✅ Complete |
+| VirusTotal integration | ✅ Complete |
+| AbuseIPDB integration | ✅ Complete |
+| Shodan integration | ✅ Complete |
+| AlienVault OTX integration | ✅ Complete |
+| AI-powered analysis (OpenAI & Gemini) | ✅ Complete |
+| Batch processing | ✅ Complete |
+| Multi-format reporting | ✅ Complete |
+| Web interface (Streamlit) | 🔜 Planned |
+| REST API endpoint | 🔜 Planned |
+| Docker container | 🔜 Planned |
+| CI/CD pipeline | 🔜 Planned |
+| GreyNoise integration | 🔜 Planned |
+| Dashboard visualizations | 🔜 Planned |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you would like to change.
 
 ```bash
-# Fork'layın ve klonlayın
+# Fork and clone
 git clone https://github.com/YOUR_USERNAME/ioc-enricher-agent.git
 
-# Feature branch oluşturun
+# Create feature branch
 git checkout -b feature/amazing-feature
 
-# Değişikliklerinizi commit edin
+# Commit your changes
 git commit -m 'feat: add amazing feature'
 
-# Branch'i push edin
+# Push to branch
 git push origin feature/amazing-feature
 
-# Pull Request açın
+# Open Pull Request
 ```
 
 ### Contribution Guidelines
 
-1. Kod standardına uyun (PEP 8)
-2. Test coverage'ı koruyun (%90+)
-3. Dokümantasyon güncelleyin
-4. Commit mesajlarında conventional commits kullanın
+| Requirement | Description |
+|-------------|-------------|
+| Code Style | Follow PEP 8 standards |
+| Test Coverage | Maintain 90%+ coverage |
+| Documentation | Update relevant docs |
+| Commit Messages | Use conventional commits |
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
-
----
-
-## ⚠️ Sorumluluk Reddi
-
-Bu araç **yalnızca eğitim ve yetkili güvenlik testi amaçlıdır**. Yetkisiz sistemlerde kullanımı yasa dışıdır. Kullanıcılar, bu aracı kullanırken tüm geçerli yasalara uymakla yükümlüdür.
-
-**Bu araç:**
-- Yalnızca meşru güvenlik araştırmaları için tasarlanmıştır
-- Kötü amaçlı kullanım için tasarlanmamıştır
-- Kullanıcının sorumluluğundadır
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Teşekkürler
+## ⚠️ Disclaimer
 
-- VirusTotal - Kapsamlı malware detection için
-- AbuseIPDB - IP reputation verisi için
-- Shodan - Infrastructure intelligence için
-- AlienVault OTX - Threat pulse data için
-- OpenAI & Google - AI analiz yetenekleri için
+This tool is **for educational and authorized security testing purposes only**. Unauthorized use on systems you don't own or have permission to test is illegal. Users are responsible for complying with all applicable laws.
+
+**This tool:**
+- Is designed for legitimate security research only
+- Is not designed for malicious use
+- Use is at user's own responsibility
 
 ---
 
-## 📧 İletişim
+## 🙏 Acknowledgments
+
+| Provider | Purpose |
+|----------|---------|
+| VirusTotal | Comprehensive malware detection |
+| AbuseIPDB | IP reputation data |
+| Shodan | Infrastructure intelligence |
+| AlienVault OTX | Threat pulse data |
+| OpenAI & Google | AI analysis capabilities |
+
+---
+
+## 📧 Contact
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erkansahin23/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cyb3rkan)
 
-Sorular, sorunlar veya öneriler için lütfen GitHub'da bir issue açın.
+For questions, issues, or suggestions, please open an issue on GitHub.
 
 ---
 
 ## ⭐ Star History
 
-Bu projeyi faydalı bulduysanız, lütfen yıldız vermeyi düşünün!
+If you find this project useful, please consider giving it a star!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=cyb3rkan/ioc-enricher-agent&type=Date)](https://star-history.com/#cyb3rkan/ioc-enricher-agent&Date)
 
 ---
 
+<div align="center">
+
 **Built with ❤️ for the cybersecurity community**
 
 *Making threat intelligence accessible to everyone*
+
+</div>
