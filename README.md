@@ -421,8 +421,6 @@ For questions, issues, or suggestions, please open an issue on GitHub.
 
 ---
 
----
-
 <div align="center">
 
 **Built with ❤️ for the cybersecurity community**
