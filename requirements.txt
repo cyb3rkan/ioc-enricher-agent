@@ -10,7 +10,7 @@ validators>=0.34.0
 # AI/ML - Updated versions
 openai>=1.54.0
 httpx>=0.27.2
-google-generativeai>=0.8.3
+google-generativeai>=0.8.6
 
 # CLI
 click>=8.1.7
